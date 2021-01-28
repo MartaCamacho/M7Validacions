@@ -1,0 +1,22 @@
+
+/* GENERAL LAYOUT */
+
+
+/* NAVBAR */
+
+.logo {
+    width: 120px;
+}
+
+@media screen and (min-width: 600px) {
+    .logo {
+        width: 150px;
+    }
+}
+
+/* LOGIN */
+
+.form-border {
+    border-radius: 10%;
+    background-color: rgba(0, 128, 0, 0.171);
+}
