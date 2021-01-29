@@ -40,18 +40,23 @@
 
   <!-- Form -->
   <section class="container w-25 mt-3 mb-3 table-bordered form-border">
-    <form class="pt-5 pb-5 was-validated" id<="form">
+    <h5 class="text-center mt-3">Registro</h5>
+    <form class="pt-5 pb-5" id<="form">
         <div class="form-group">
             <label for="email">Dirección de email</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Pon tu email">
         </div>
         <div class="form-group">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+            <input type="password" class="form-control" id="password" name="password" placeholder="******">
         </div>
+        <div class="form-group">
+          <label for="password">Repetir contraseña</label>
+          <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="******">
+      </div>
         <div class="row mt-4">
             <div class="col text-center">
-                <button type="submit" class="btn btn-success align-center" id="login-button" value="Submit">Submit</button>
+                <button type="submit" class="btn btn-success align-center" id="signup-button" value="Submit">Submit</button>
             </div>
         </div>
     </form>
@@ -111,7 +116,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/login.js"></script>
+  <script src="./js/register.js"></script>
 
 </body>
 

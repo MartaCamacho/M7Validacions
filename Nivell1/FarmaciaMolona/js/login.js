@@ -1,5 +1,3 @@
-console.log('hola mundo')
-
 
 
 class Login {
@@ -18,19 +16,19 @@ class Login {
     const emailValidation = email.match(
       /([a-zA-ZñÑ0-9._-]+@[a-zA-ZñÑ0-9._-]+\.[a-zA-Z0-9._-]+)/gi
     );
-    console.log(emailValidation, 'vali')
     this.messageContainer.innerHTML = "";
     const message = document.createElement("p");
-    if (email.length === 0 || emailValidation.length === 0 || emailvalidation === null){
+    if (email.length === 0 || emailValidation.length === 0 || emailValidation === null){
       message.innerHTML = 'email no válido';
-    } else if (password.length === 0 ){
-      message.innerHTML = 'La contraseña no debe estar vacía';
-      }
       this.messageContainer.appendChild(message)
-
+      this.emailInput.className = "form-control is-invalid"; 
+    } else if (password === "" ){
+      message.innerHTML = 'La contraseña no debe estar vacía';
+      this.messageContainer.appendChild(message)
+      this.passwordInput.className = "form-control is-invalid";
+      } 
+      this.messageContainer.className = "message-container-styling"; 
     }
-
-  
 }
 
 const login = new Login();
