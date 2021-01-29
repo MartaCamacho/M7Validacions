@@ -20,6 +20,9 @@ class Signup {
     );
     this.messageContainer.innerHTML = "";
     const message = document.createElement("p");
+
+   
+
     if (
       email.length === 0 ||
       emailValidation.length === 0 ||
@@ -36,7 +39,17 @@ class Signup {
       message.innerHTML = "La contraseña no debe estar vacía";
       this.messageContainer.appendChild(message);
       this.passwordInput.className = "form-control is-invalid";
-    } else if (repeatPassword !== password) {
+    } 
+    
+    /* NIVELL 2 */
+    else if (/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/.test(password) === false || password.length < 8) {
+      message.innerHTML = "La contraseña debe tener un mínimo de 8 caracteres (que sean mayúsculas, minúsculas y números)";
+      this.messageContainer.appendChild(message);
+      this.passwordInput.className = "form-control is-invalid";
+    }
+    /* NIVELL 2 END*/
+    
+    else if (repeatPassword !== password) {
       message.innerHTML = "Las contraseñas deben ser iguales";
       this.messageContainer.appendChild(message);
       this.repeatPassword.className = "form-control is-invalid";
