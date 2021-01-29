@@ -3,6 +3,7 @@ class Signup {
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
     this.repeatPasswordInput = document.querySelector("#repeatPassword");
+    this.selectInput = document.querySelector("#select");
 
     this.signupButton = document.querySelector("#signup-button");
     this.messageContainer = document.querySelector(".message-container");
@@ -11,6 +12,7 @@ class Signup {
   submit = (event) => {
     event.preventDefault();
     const email = this.emailInput.value;
+    const select = this.selectInput.value;
     const password = this.passwordInput.value;
     const repeatPassword = this.repeatPasswordInput.value;
     const emailValidation = email.match(
@@ -26,6 +28,10 @@ class Signup {
       message.innerHTML = "email no válido";
       this.messageContainer.appendChild(message);
       this.emailInput.className = "form-control is-invalid";
+    } else if (select === "not-valid") {
+      message.innerHTML = "Elige una provincia";
+      this.messageContainer.appendChild(message);
+      this.select.className = "form-control is-invalid";
     } else if (password === "") {
       message.innerHTML = "La contraseña no debe estar vacía";
       this.messageContainer.appendChild(message);
