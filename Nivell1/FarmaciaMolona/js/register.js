@@ -61,3 +61,4 @@ class Signup {
 const signup = new Signup();
 
 signup.signupButton.addEventListener("click", signup.submit);
+
