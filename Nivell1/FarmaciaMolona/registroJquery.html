@@ -15,6 +15,8 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -30,20 +32,30 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a href="./index.html"><img class="logo" src="img/logo.png" alt="logo" ;
-        /></a>
-      <div>
-        <a class="btn btn-success" href="./registro.html">Regístrate</a>
-        <a class="btn btn-success" href="./login.html">Accede</a>
-        <a class="btn btn-success" href="./registroJquery.html">Regístrate Jquery</a>
+  <nav class="navbar navbar-expand-sm navbar-light bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img class="logo" src="img/logo.png" alt="logo"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 ml-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="btn btn-success" href="./registro.html">Regístrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-success" href="./login.html">Accede</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-success" href="./registroJquery.html">Regístrate Jquery</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
 <!-- Nivell 3 Form with jQuery -->
-<section class="container w-25 mt-3 mb-3 table-bordered form-border">
+<section class="container mt-3 mb-3 table-bordered form-border">
   <h5 class="text-center mt-3">Registro</h5>
   <form class="pt-5 pb-5" id="form" onsubmit="return validate();">
       <div class="form-group">
@@ -121,6 +133,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
   <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   <script src="./js/registerJquery.js"></script>
   
 

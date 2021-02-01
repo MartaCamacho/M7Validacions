@@ -19,6 +19,7 @@
 .form-border {
     border-radius: 10px;
     background-color: rgba(0, 128, 0, 0.171);
+    max-width: 350px;
 }
 
 .message-container-styling {
