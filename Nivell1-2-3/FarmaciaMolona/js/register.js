@@ -12,29 +12,30 @@ class Signup {
   submit = (event) => {
     event.preventDefault();
     const email = this.emailInput.value;
+    function validateEmail(x) {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(x);
+    }
+    const validate = validateEmail(email);
+    console.log(validate, 'la val')
+    
     const select = this.selectInput.value;
     const password = this.passwordInput.value;
     const repeatPassword = this.repeatPasswordInput.value;
-    const emailValidation = email.match(
-      /([a-zA-ZñÑ0-9._-]+@[a-zA-ZñÑ0-9._-]+\.[a-zA-Z0-9._-]+)/gi
-    );
     this.messageContainer.innerHTML = "";
     const message = document.createElement("p");
-
-   
-
-    if (
-      email.length === 0 ||
-      emailValidation.length === 0 ||
-      emailValidation === null
-    ) {
-      message.innerHTML = "email no válido";
+    if (email.length === 0) {
+      message.innerHTML = "El email no puede estar vacío";
       this.messageContainer.appendChild(message);
       this.emailInput.className = "form-control is-invalid";
-    } else if (select === "not-valid") {
+    } else if (validate === false){
+      message.innerHTML = "Email no válido";
+      this.messageContainer.appendChild(message);
+      this.emailInput.className = "form-control is-invalid";
+    }else if (select === "not-valid") {
       message.innerHTML = "Elige una provincia";
       this.messageContainer.appendChild(message);
-      this.select.className = "form-control is-invalid";
+      this.selectInput.className = "form-control is-invalid";
     } else if (password === "") {
       message.innerHTML = "La contraseña no debe estar vacía";
       this.messageContainer.appendChild(message);

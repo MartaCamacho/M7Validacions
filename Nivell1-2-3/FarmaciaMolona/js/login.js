@@ -4,7 +4,6 @@ class Login {
   constructor() {
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
-
     this.loginButton = document.querySelector("#login-button");
     this.messageContainer = document.querySelector(".message-container");
   }
@@ -13,12 +12,11 @@ class Login {
     event.preventDefault();
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
-    const emailValidation = email.match(
-      /([a-zA-ZñÑ0-9._-]+@[a-zA-ZñÑ0-9._-]+\.[a-zA-Z0-9._-]+)/gi
-    );
+    const emailValidation = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value);
+    console.log(emailValidation, 'la val')
     this.messageContainer.innerHTML = "";
     const message = document.createElement("p");
-    if (email.length === 0 || emailValidation.length === 0 || emailValidation === null){
+    if (email.length === 0 || emailValidation.length === 0 || emailValidation === false){
       message.innerHTML = 'email no válido';
       this.messageContainer.appendChild(message)
       this.emailInput.className = "form-control is-invalid"; 

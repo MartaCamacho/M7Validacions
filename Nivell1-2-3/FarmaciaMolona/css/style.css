@@ -1,6 +1,9 @@
 
-/* GENERAL LAYOUT */
-
+/* HOME PAGE */
+.top-section-search-title {
+    overflow: hidden;
+    height: 550px;
+}
 
 /* NAVBAR */
 
